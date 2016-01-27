@@ -1,0 +1,36 @@
+<!-- 如果有些页面想隐藏tab的话 在 ion-view 标签上添加 hide-tabs 属性 -->
+<ion-view view-title="地图" hide-back-button="true">
+	<!-- 重新定义头部左右模块 -->
+	<ion-nav-buttons side="left">
+	<button class="button icon ion-location bon" ui-sref="index.map-location">广州</button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<button class="button icon ion-search"></button>
+		<button class="button icon ion-qr-scanner"></button>
+	</ion-nav-buttons>
+	<!-- 重新定义头部中间内容 -->
+	<ion-nav-title>
+		<div class="t-top-tab">
+			<a class="cur">景点</a>
+			<a>好物</a>
+		</div>
+	</ion-nav-title>
+	<!-- 主体 -->
+	<ion-content>
+
+
+		地图页面<br />
+		<br />
+		<br />
+		<br />
+		几个简单的例子<br /><br />
+		<a ui-sref="index.mine-login">跳去登陆</a><br /><br />
+		<a ng-click="goUrl('index.mine-login')">跳去登陆</a><br /><br />
+		<a ng-click="loadding()">弹出信息</a><br /><br />
+		输出信息：
+		<div class="" ng-repeat="item in data">{{item.name}}：{{item.age}}</div><br /><br />
+
+
+		
+	</ion-content>
+</ion-view>

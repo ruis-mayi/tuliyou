@@ -1,0 +1,46 @@
+/**
+ * 公共样式
+ * 以m-开头
+ * 比如 m-xxxx
+ */
+.m-xxxx{}
+
+
+
+/**
+ * 小滨样式
+ * 以t-开头
+ * 比如 t-xxxx 
+ */
+
+
+/*地图头部tab切换*/
+.t-top-tab{display:inline-block;width:160px;height:25px;line-height:25px;border:1px solid #C8013C;margin:10px auto 0;border-radius:15px;overflow:hidden;border:1px solid #C8013C;}
+.t-top-tab a{float:left;width:50%;font-size:14px;color:#C8013C!important;}
+.t-top-tab a.cur{background-color:#C8013C;color:#fff!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * 威少样式
+ * 以w-开头
+ * 比如 w-xxxx
+ */
+.w-xxxx{}
