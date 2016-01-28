@@ -33,52 +33,6 @@ ctrlApp.run(function($ionicPlatform,$rootScope, $state, $stateParams) {
 
 
 
-  // 获取token
-  $rootScope.token = localStorage.getItem("token");
-  // 初始化用户信息
-  $rootScope.userData = null;
-  // 用户状态 0为已登录 -10为未登录 -3为token错误或过期
-  $rootScope.isLogin = -10;
-
-
-  // 获取token请求用户信息
-  $rootScope.getUserInfo = function (callback) {
-    if ($rootScope.token) {
-      $http.get(dataIntf.getInfo + "?token=" + $rootScope.token).success(function(response, status, headers, config) {
-        if (response.status == "0") {
-          // console.log("获取信息成功");
-          // console.log(response);
-          $rootScope.userData = response.result;
-          $rootScope.isLogin = 0;
-          callback({"status":response.status,"msg":"成功"});
-        }else {
-          // console.log("token过期或错误");
-          // console.log(response);
-          $rootScope.isLogin = -3;
-          callback({"status":response.status,"msg":response.errMsg});
-        };
-      }).error(function (response, status, headers, config) {
-        // console.log(response);
-        $rootScope.isLogin = -10;
-        callback({"status":"-1","msg":"请求错误"});
-      });
-    }else {
-      // console.log("未登录");
-      $rootScope.isLogin = -10;
-      callback({"status":"-10","msg":"未登录"});
-    };
-  }
-
-
-
-  $rootScope.getUserInfo(function (response) {
-    console.log(response);
-  });
-
-
-
-
-
 
 
 

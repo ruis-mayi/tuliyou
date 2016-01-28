@@ -191,7 +191,8 @@ angular.module("starter", ["ionic", "starter.controllers", "starter.services", "
 
   // 路由重定向
   $urlRouterProvider
-  .when('', '/welcome')//初始化时进入欢迎页
+  // .when('', '/welcome')//APP初始化时进入欢迎页
+  .when('', '/index/map')//初始化时进入地图首页
   .otherwise('/404');//404页面
 
 });
